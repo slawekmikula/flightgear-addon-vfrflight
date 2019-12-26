@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+
+<!-- property list for vfrflight -->
+<PropertyList>
+    <generic>
+        <output>
+            <line_separator>newline</line_separator>
+            <var_separator>;</var_separator>
+
+            <chunk>
+                <name>getUserLat</name>
+                <type>float</type>
+                <format>%.10f</format>
+                <node>/position/latitude-deg</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserLon</name>
+                <type>float</type>
+                <format>%.10f</format>
+                <node>/position/longitude-deg</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserAltAboveTerrain</name>
+                <type>float</type>
+                <format>%f</format>
+                <node>/position/altitude-agl-ft</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserIndicatedAlt</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/instrumentation/altimeter/indicated-altitude-ft</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserIndicatedSpeed</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/instrumentation/airspeed-indicator/indicated-speed-kt</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserGs</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/velocities/groundspeed-kt</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserTrueHeading</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/orientation/heading-deg</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserMagHeading</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/orientation/heading-magnetic-deg</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserPitch</name>
+                <type>float</type>
+                <format>%f</format>
+                <node>/orientation/pitch-deg</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserBank</name>
+                <type>float</type>
+                <format>%f</format>
+                <node>/orientation/roll-deg</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserVerticalSpeed</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</node>
+            </chunk>
+
+            <chunk>
+                <name>getTimestamp</name>
+                <format>%s</format>
+                <type>string</type>
+                <node>/instrumentation/clock/indicated-string</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserAlt</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/position/altitude-ft</node>
+            </chunk>
+
+            <chunk>
+                <name>getGroundLevel</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/position/ground-elev-ft</node>
+            </chunk>
+
+            <chunk>
+                <name>getWindDirection</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/environment/wind-from-heading-deg</node>
+            </chunk>
+
+            <chunk>
+                <name>getWindVelocity</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/environment/wind-speed-kt</node>
+            </chunk>
+
+            <chunk>
+                <name>getUserTas</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/instrumentation/airspeed-indicator/true-speed-kt</node>
+            </chunk>
+
+            <chunk>
+                <name>getFlapsHandle</name>
+                <type>short</type>
+                <format>%d</format>
+                <node>/controls/flight/flaps</node>
+            </chunk>
+
+            <chunk>
+                <name>getYokeXPosition</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/controls/flight/aileron</node>
+            </chunk>
+
+            <chunk>
+                <name>getYokeYPosition</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/controls/flight/elevator</node>
+            </chunk>
+
+            <chunk>
+                <name>getRudderPeddalsPosition</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/controls/flight/rudder</node>
+            </chunk>
+
+            <chunk>
+                <name>getgForce</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/accelerations/pilot-g</node>
+            </chunk>
+
+            <chunk>
+                <name>getFps</name>
+                <format>%f</format>
+                <type>float</type>
+                <node>/sim/frame-rate</node>
+            </chunk>
+
+
+        </output>
+
+    </generic>
+
+</PropertyList>
