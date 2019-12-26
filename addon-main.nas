@@ -10,7 +10,21 @@ var main = func( addon ) {
     var my_version   = getprop("/addons/by-id/" ~ my_addon_id ~ "/version");
     var my_root_path = getprop("/addons/by-id/" ~ my_addon_id ~ "/path");
     var my_settings_root_path = "/addons/by-id/" ~ my_addon_id ~ "/addon-devel/";
-    
+
+    var initProtocol = func() {
+      var refresh = "10"; # refresh rate
+      var udphost = getprop(my_settings_root_path ~ "udp-host") or "localhost";
+      var udpport = getprop(my_settings_root_path ~ "udp-port") or "3333";
+      var protocolstring = "generic,socket,out," ~ refresh ~ "," ~ udphost ~ "," ~ udpport ~ ",udp,[addon=" ~ my_addon_id ~ "]/Protocol/vfrflight";
+
+      fgcommand("add-io-channel",
+        props.Node.new({
+            "config" : protocolstring,
+            "name" : "vfrflight"
+        })
+      );
+    }
+
     var init = setlistener("/sim/signals/fdm-initialized", func() {
         removelistener(init); # only call once
         initProtocol();
@@ -30,18 +44,4 @@ var main = func( addon ) {
         })
       );
     });
-
-    var initProtool = func() {
-      var refresh = "10"; # refresh rate
-      var udphost = getprop(settings ~ "udp-host", "localhost");
-      var udpport = getprop(settings ~ "udp-port", "3333");
-      var protocolstring = "generic,socket,out," ~ refresh ~ "," ~ host ~ "," ~ udpport ~ ",udp,[addon=" ~ my_addon_id ~ "]/Protocol/vfrflight";
-
-      fgcommand("add-io-channel",
-        props.Node.new({
-            "config" : protocolstring,
-            "name" : "vfrflight"
-        })
-      );
-    }
 }
