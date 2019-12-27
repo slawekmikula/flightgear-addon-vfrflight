@@ -38,32 +38,42 @@
 
 	<hrule/>
 
-    <input>
-        <name>udp-host</name>
-        <label>UDP host:</label>
-        <halign>right</halign>
-        <pref-width>200</pref-width>
-        <height>25</height>
-        <property>/addons/by-id/com.slawekmikula.flightgear.VfrFlight/addon-devel/udp-host</property>
-        <binding>
-            <command>dialog-apply</command>
-            <object-name>udp-host</object-name>
-        </binding>
-    </input>
+    <group>
+        <layout>hbox</layout>
 
-    <input>
-        <name>udp-port</name>
-        <label>UDP port:</label>
-        <halign>right</halign>
-        <pref-width>200</pref-width>
-        <height>25</height>
-        <property>/addons/by-id/com.slawekmikula.flightgear.VfrFlight/addon-devel/udp-port</property>
-        <binding>
-            <command>dialog-apply</command>
-            <object-name>udp-port</object-name>
-        </binding>
-    </input>
+        <text>
+            <label>UDP host:</label>
+        </text>
 
+        <input>
+            <name>udp-host</name>
+            <height>25</height>
+            <property>/addons/by-id/com.slawekmikula.flightgear.VfrFlight/addon-devel/udp-host</property>
+            <binding>
+                <command>dialog-apply</command>
+                <object-name>udp-host</object-name>
+            </binding>
+        </input>
+    </group>
+
+    <group>
+        <layout>hbox</layout>
+
+        <text>
+            <label>UDP port:</label>
+        </text>
+
+        <input>
+            <name>udp-port</name>
+            <height>25</height>
+            <property>/addons/by-id/com.slawekmikula.flightgear.VfrFlight/addon-devel/udp-port</property>
+            <binding>
+                <command>dialog-apply</command>
+                <object-name>udp-port</object-name>
+            </binding>
+        </input>
+    </group>
+    
 	<hrule/>
 
 	<group>
