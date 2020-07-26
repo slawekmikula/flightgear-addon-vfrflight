@@ -27,6 +27,18 @@
             This add-on feeds the data to the VFRFlight application
         </long-description>
 
+        <localized>
+            <pl>
+                <short-description type="string">
+                    Rozszerzenie integracji dla VFRFlight
+                </short-description>
+
+                <long-description type="string">
+                    To rozszerzenie dostarcza dane lotu do aplikacji VFRFlight
+                </long-description>
+            </pl>
+        </localized>
+
         <license>
             <designation type="string">
                 GNU GPL version 2 or later
@@ -45,16 +57,12 @@
         <max-FG-version type="string">none</max-FG-version>
 
         <urls>
-            <home-page type="string">
-                https://forum.flightgear.org/viewtopic.php
-            </home-page>
-
             <download type="string">
                 https://github.com/slawekmikula/fg-addon-vfrflight/download
             </download>
 
             <support type="string">
-                http://wiki.flightgear.org/addon-vfrflight
+                https://github.com/slawekmikula/fg-addon-vfrflight/issues
             </support>
 
             <code-repository type="string">

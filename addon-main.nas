@@ -6,9 +6,7 @@
 
 var main = func( addon ) {
     var root = addon.basePath;
-    var my_addon_id  = "com.slawekmikula.flightgear.VfrFlight";
-    var my_version   = getprop("/addons/by-id/" ~ my_addon_id ~ "/version");
-    var my_root_path = getprop("/addons/by-id/" ~ my_addon_id ~ "/path");
+    var my_addon_id  = addon.id;
     var my_settings_root_path = "/addons/by-id/" ~ my_addon_id ~ "/addon-devel/";
 
     var udpHostNode = props.globals.getNode(my_settings_root_path ~ "/udp-host", 1);
@@ -26,7 +24,7 @@ var main = func( addon ) {
       var refresh = "10"; # refresh rate
       var udphost = getprop(my_settings_root_path ~ "udp-host") or "localhost";
       var udpport = getprop(my_settings_root_path ~ "udp-port") or "3333";
-      var protocolstring = "generic,socket,out," ~ refresh ~ "," ~ udphost ~ "," ~ udpport ~ ",udp,[addon=" ~ my_addon_id ~ "]/Protocol/vfrflight";
+      var protocolstring = "generic,socket,out," ~ refresh ~ "," ~ udphost ~ "," ~ udpport ~ ",udp,vfrflight";
 
       fgcommand("add-io-channel",
         props.Node.new({
