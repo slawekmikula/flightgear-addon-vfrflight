@@ -16,7 +16,10 @@ Code:
     ./fgbin/bin/fgfs --fg-root=./fgdata --launcher --prop:/sim/fg-home=/myfolder/flightgear/fghome --addon="/myfolder/addons/thisaddon"
 ```
 
-# Usage
+# User manual
+
+Full user manual you can find in 'doc' folder. It is MarkDown formatted
+documentation started with manual.md document.
 
 
 # History
