@@ -18,9 +18,8 @@ Code:
 
 # User manual
 
-Full user manual you can find in 'doc' folder. It is MarkDown formatted
-documentation started with manual.md document.
-
+Full user manual you can find in the 'doc' folder. It is MarkDown formatted
+documentation started with the manual.md document.
 
 # History
 
